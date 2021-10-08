@@ -24,6 +24,11 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
+app.get("/api", function(req, res) {
+  now = new Date;
+  res.json({utc: now, unix: Date.now()});
+})
+
 
 
 // listen for requests :)
